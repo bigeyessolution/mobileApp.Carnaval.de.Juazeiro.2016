@@ -15,6 +15,7 @@ and open the template in the editor.
 .ui-content {
     padding: 0 !important;
     margin-bottom: 4rem;
+    margin-top: 4rem;
 }
 
 .ui-header h1 {
