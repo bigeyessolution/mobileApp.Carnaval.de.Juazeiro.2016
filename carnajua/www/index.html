@@ -1,0 +1,84 @@
+
+<!DOCTYPE html> 
+<html> 
+
+<head>
+<!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<title>CarnaJua 2016</title> 
+    
+    <link rel="apple-touch-icon" href=""/>
+
+	
+    <!-- scripts -->
+	<script src="js/jquery-1.6.4.min.js"></script>
+	<script src="js/jquery.mobile-1.0.min.js"></script>
+    
+    
+    <!-- css / theme -->
+   	<link rel="stylesheet" href="css/10.css"><!-- change the number of the css file to switch themes -->
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    <!-- add to homepage bubble on iphone, ipad  -->
+	<script type="text/javascript">
+		if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
+			document.write('<link rel="stylesheet" href="assets\/add-bubble\/style\/add2home.css">');
+			document.write('<script type="application\/javascript" src="assets\/add-bubble\/src\/add2home.js" charset="utf-8"><\/s' + 'cript>');
+		}
+	</script>
+	<!-- /add to homepage bubble on iphone, ipad  -->
+    
+
+</head> 
+
+
+<body><div data-role="page">
+
+	<!-- header -->
+	<div data-role="header" data-position="fixed" data-fullscreen="true" class="page-header home-page-header">
+		<div class="logo"></div>
+	</div>
+    <!--/header -->
+
+	<div data-role="content" id="atracoes">	       
+        <p>Teste 1</p>        
+  	</div><!-- /content -->
+
+  	<div data-role="content" id="votacao">	       
+        <p>Teste 2</p>        
+  	</div><!-- /content -->
+
+  	<div data-role="content" id="abada">	       
+        <p>Teste 3</p>        
+  	</div><!-- /content -->
+	
+
+	<!-- footer -->
+	<div data-role="footer"  data-position="fixed" data-fullscreen="true">
+		<div data-role="navbar" class="custom-icons" data-grid="b">
+			<ul>
+				<li><a href="#atracoes" id="icon-atracoes" data-icon="custom">Atrações</a></li>
+				<li><a href="#votacao" id="icon-votacao" data-icon="custom">Votação</a></li>
+				<li><a href="#abada" id="icon-abada" data-icon="custom">Abadás!</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+	
+</div><!-- /page -->
+
+</body>
+</html>
