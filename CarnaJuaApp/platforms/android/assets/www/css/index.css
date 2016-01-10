@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08/01/2016, 00:22:04
+    Author     : vanlivre
+*/
+
+/* =============================================================================
+   Header Logo
+   ========================================================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body{
+  font-family: 'Lato', sans-serif !important;
+}
+
+.ui-content {
+    padding: 0 !important;
+    margin-bottom: 4rem;
+    margin-top: 0.4rem;
+}
+
+.text_details{
+  background-color: #ffffff;
+  width: 100%;  
+}
+
+.text_details p{
+  text-align: justify;
+  padding: 1rem;
+}
+
+.text p{
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #0a0a0a;
+  font-weight: 900;
+}
+
+.left{
+  float: left;
+  margin-left: 0.2rem;
+}
+
+.right{
+  float: right;
+  margin-right: 0.2rem;
+}
+
+.title_img{
+  height: 2rem;
+  width: auto;
+}
+
+.ui-header h1 {
+    width: 8rem;
+}
+
+.ui-header h1 img {
+    width: 8rem;
+    height: auto;
+}
+
+div.logo {
+	width: auto; 
+	height:5.5rem; 
+	background:url(../img/logo.png) top center no-repeat;
+	background-size: auto 5rem;
+}
+
+.ui-header{
+	height: 6rem;
+	background-color: transparent !important;
+	border-bottom: none;
+	border-style: none;
+  margin-bottom: 0.4rem;
+  border-bottom: none !important;
+  border-style: none !important;
+}
+
+/* =============================================================================
+   Footer Nav Icons
+   ========================================================================== */
+
+.ui-footer {
+    border: 0 !important;
+}
+
+.custom-icons .ui-btn .ui-btn-inner { 
+	padding-top: 40px !important; 
+}
+.custom-icons .ui-btn .ui-icon { 
+	width: 30px!important; 
+	height: 30px!important; 
+	margin-left: -15px !important; 
+	box-shadow: none!important; 
+	-moz-box-shadow: none!important; 
+	-webkit-box-shadow: none!important; 
+	-webkit-border-radius: 0 !important; 
+	border-radius: 0 !important; 
+}
+
+/*.ui-icon-atracoes:after { background:url(../img/icon_estrela.png); background-size: 18px 18px; }*/
+.ui-icon-atracoes:after { background:url(../img/icon_estrela.png) 50% 50% no-repeat;  background-size: 22px 27px; }
+.ui-icon-votacao:after { background:url(../img/icon_votacao.png) 50% 50% no-repeat;  background-size: 22px 27px; }
+.ui-icon-abada:after { background:url(../img/icon_abada.png) 50% 50% no-repeat;  background-size: 27px 22px; }
+
+.ui-icon-atracoes-active:after { background:url(../img/icon_estrela_active.png) 50% 50% no-repeat;  background-size: 22px 27px; }
+.ui-icon-votacao-active:after { background:url(../img/icon_votacao_active.png) 50% 50% no-repeat;  background-size: 22px 27px; }
+.ui-icon-abada-active:after { background:url(../img/icon_abada_active.png) 50% 50% no-repeat;  background-size: 27px 22px; }
+
+.ui-cards img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.3rem;
+}
