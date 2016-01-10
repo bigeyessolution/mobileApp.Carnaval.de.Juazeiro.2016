@@ -12,15 +12,34 @@ and open the template in the editor.
    Header Logo
    ========================================================================== */
 
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body{
+  font-family: 'Lato', sans-serif !important;
+}
+
 .ui-content {
     padding: 0 !important;
     margin-bottom: 4rem;
     margin-top: 0.4rem;
 }
 
-.ui-content p{
+.text_details{
+  background-color: #ffffff;
+  width: 100%;  
+}
+
+.text_details p{
   text-align: justify;
   padding: 1rem;
+}
+
+.text p{
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #0a0a0a;
+  font-weight: 900;
 }
 
 .left{
@@ -47,12 +66,6 @@ and open the template in the editor.
     height: auto;
 }
 
-.ui-header {
-    background-color: transparent !important;
-    border-bottom: none !important;
-    border-style: none !important;
-}
-
 div.logo {
 	width: auto; 
 	height:5.5rem; 
@@ -60,11 +73,14 @@ div.logo {
 	background-size: auto 5rem;
 }
 
-.page-header{
+.ui-header{
 	height: 6rem;
-	background-color: transparent;
+	background-color: transparent !important;
 	border-bottom: none;
 	border-style: none;
+  margin-bottom: 0.4rem;
+  border-bottom: none !important;
+  border-style: none !important;
 }
 
 /* =============================================================================
@@ -94,7 +110,7 @@ div.logo {
 .ui-icon-votacao:after { background:url(../img/icon_votacao.png) 50% 50% no-repeat;  background-size: 22px 27px; }
 .ui-icon-abada:after { background:url(../img/icon_abada.png) 50% 50% no-repeat;  background-size: 27px 22px; }
 
-.ui-icon-atracoes-active:after { background:url(../img/icon_estrela_active.png) 50% 50% no-repeat !important;  background-size: 22px 27px; }
+.ui-icon-atracoes-active:after { background:url(../img/icon_estrela_active.png) 50% 50% no-repeat;  background-size: 22px 27px; }
 .ui-icon-votacao-active:after { background:url(../img/icon_votacao_active.png) 50% 50% no-repeat;  background-size: 22px 27px; }
 .ui-icon-abada-active:after { background:url(../img/icon_abada_active.png) 50% 50% no-repeat;  background-size: 27px 22px; }
 
