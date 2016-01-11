@@ -1,20 +1,42 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.bigeyessolution.CarnaJuaApp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.bigeyessolution.CarnaJuaApp" version="0.5.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
     <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/icon/android/ldpi.png" />
+    <icon density="mdpi" src="res/icon/android/mdpi.png" />
+    <icon density="hdpi" src="res/icon/android/hdpi.png" />
+    <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+    <splash density="port-hdpi" src="res/screen/android/hdpi/screen.png" />
+    <splash density="port-ldpi" src="res/screen/android/ldpi/screen.png" />
+    <splash density="port-mdpi" src="res/screen/android/mdpi/screen.png" />
+    <splash density="port-xhdpi" src="res/screen/android/xhdpi/screen.png" />
     <name>CarnaJuaApp</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        O aplicativo oficial do Carnaval 2016 de Juazeiro, Bahia.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="contato@bigeyessolution.com" href="http://bigeyessolution.com">
+        Big Eyes Solution Team
     </author>
     <content src="index.html" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="1" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
