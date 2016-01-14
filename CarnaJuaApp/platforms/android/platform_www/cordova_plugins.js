@@ -46,6 +46,14 @@ module.exports = [
         "id": "cordova-plugin-whitelist.whitelist",
         "pluginId": "cordova-plugin-whitelist",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
+        "id": "cordova-plugin-google-analytics.UniversalAnalytics",
+        "pluginId": "cordova-plugin-google-analytics",
+        "clobbers": [
+            "analytics"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -55,7 +63,8 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.1.0",
     "cordova-plugin-device": "1.1.0",
     "cordova-plugin-console": "1.0.3-dev",
-    "cordova-plugin-whitelist": "1.2.0"
+    "cordova-plugin-whitelist": "1.2.0",
+    "cordova-plugin-google-analytics": "0.8.1"
 }
 // BOTTOM OF METADATA
 });
