@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Carnaval de Juazeiro - 2016</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link type="text/css" rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+        <link type="text/css" rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+        <link type="text/css" rel="stylesheet" href="css/CarnaJua2016.min.css">
+        <link type="text/css" rel="stylesheet" href="css/index.css">
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/votacao.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body onload="onLoad ()">
+        <section id="atracoes" data-role="page">
+            <header data-role="header" data-position="fixed"><h1><img alt="" src="img/logo_01.png"></h1></header>
+            <footer data-role="footer" data-theme="d" class="ui-footer-fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-atracoes-active">Atrações</a></li>
+                        <li><a href="#votacao" class="ui-btn ui-btn-icon-top ui-icon-votacao">Votações</a></li>
+                        <li><a href="#abada" class="ui-btn ui-btn-icon-top ui-icon-abada">Abadás</a></li>
+                    </ul>
+                </div>
+            </footer>
+            
+            
+            <div data-role="main" class="ui-content ui-cards text">
+                <p>No ritmo das estrelas. Saiba quem agitará o #CarnaJua2016, fazendo a alegria da galera.</p>
+                <img alt="" src="img/17_mini.jpg">
+                <img alt="" src="img/06_mini.jpg">
+                <img alt="" src="img/04_mini.jpg">
+                <img alt="" src="img/08_mini.jpg">
+                <img alt="" src="img/13_mini.jpg">
+                <img alt="" src="img/12_mini.jpg">
+                <img alt="" src="img/11_mini.jpg">
+                <img alt="" src="img/19_mini.jpg">
+                <img alt="" src="img/10_mini.jpg">
+                <img alt="" src="img/05_mini.jpg">
+                <img alt="" src="img/16_mini.jpg">
+                <img alt="" src="img/01_mini.jpg">
+                <img alt="" src="img/15_mini.jpg">
+                <img alt="" src="img/18_mini.jpg">
+                <img alt="" src="img/02_mini.jpg">
+                <img alt="" src="img/03_mini.jpg">
+                <img alt="" src="img/14_mini.jpg">
+                <img alt="" src="img/09_mini.jpg">
+            </div>
+            
+        </section>
+        
+        <section id="votacao" data-role="page">
+            <header data-role="header" data-position="fixed"><h1><img alt="" src="img/logo_02.png"></h1></header>
+            <footer data-role="footer" data-theme="d" class="ui-footer-fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#atracoes" class="ui-btn ui-btn-icon-top ui-icon-atracoes">Atrações</a></li>
+                        <li><a class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-votacao-active">Votações</a></li>
+                        <li><a href="#abada" class="ui-btn ui-btn-icon-top ui-icon-abada">Abadás</a></li>
+                    </ul>
+                </div>
+            </footer>
+            
+            <div data-role="main" class="ui-content text">
+                <p>O #CarnaJua2016 é democrático, escolha a corte que irá animar nossa folião!</p>
+                <img class="title_img" src="img/REI.png">
+                <div class="ui-cards">
+                    <a href="#votacao_momo_1"><img alt="" src="img/rei_01_mini.jpg"></a>
+                </div>
+                <img class="title_img" src="img/RAINHA.png">
+                <div class="ui-cards">
+                    <a href="#votacao_rainha_2"><img alt="" src="img/rainha_01_mini.jpg"></a>
+                    <a href="#votacao_rainha_1"><img alt="" src="img/rainha_02_mini.jpg"></a>
+                    <a href="#votacao_rainha_3"><img alt="" src="img/rainha_03_mini.jpg"></a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="abada" data-role="page">
+            <header data-role="header" data-position="fixed"><h1><img alt="" src="img/logo_03.png"></h1></header>
+            <footer data-role="footer" data-theme="d" class="ui-footer-fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#atracoes" class="ui-btn ui-btn-icon-top ui-icon-atracoes">Atrações</a></li>
+                        <li><a href="#votacao" class="ui-btn ui-btn-icon-top ui-icon-votacao">Votações</a></li>
+                        <li><a class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-abada-active">Abadás</a></li>
+                    </ul>
+                </div>
+            </footer>
+            
+            <div data-role="main" class="ui-content ui-cards text">
+                <p>Os bloco oficiais estão no #CarnaJua2016 trazendo excelentes atrações, vamos curtir juntos!</p>
+                <a href="tel:+5574988137001"><img alt="" src="img/bloco_01_mini.jpg"></a>
+                <a href="tel:+5574988023570"><img alt="" src="img/bloco_02_mini.jpg"></a>
+                <a href="tel:+5574988161717"><img alt="" src="img/bloco_03_mini.jpg"></a>
+            </div>
+        </section>
+        
+
+        <section id="votacao_momo_1" data-role="page">
+            <header data-role="header" data-position="fixed"><h1><img alt="" src="img/logo_02.png"></h1></header>
+            <footer data-role="footer" data-theme="d" class="ui-footer-fixed">
+                <div data-role="navbar">
+                    <ul>                        
+                        <li><a href="#atracoes" class="ui-btn ui-btn-icon-top ui-icon-atracoes">Atrações</a></li>
+                        <li><a class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-votacao-active">Votações</a></li>
+                        <li><a href="#abada" class="ui-btn ui-btn-icon-top ui-icon-abada">Abadás</a></li>
+                    </ul>
+                </div>
+            </footer>
+            
+            <div data-role="main" class="ui-content ui-cards">
+                <img src="img/rei_01_mini.jpg">
+                <div class="text_details">
+                    <p>Tierre Uesdle Ribeiro dos Santos, 25 anos, natural de Juazeiro, mora na Rua Francisco Martins Duarte, Centro, Juazeiro. É técnico em Serviços Públicos, especializado em Política, cursando o 3º período da Faculdade de Publicidade e Propaganda. Foi candidato ano passado a Rei Momo não chegando a ser eleito. O que passará ao folião de Juazeiro neste carnaval é muita paz, muita alegria, principalmente, e que todos venham brincar o carnaval com pensamentos positivos.
+                    </p>
+                </div> 
+                <a href="#votacao" class="left ui-btn ui-btn-c ui-btn-inline ui-corner-all">Voltar</a>
+                <button onclick="votarMomo(1)" class="btn-votar right ui-btn ui-btn-b ui-btn-inline ui-corner-all">Votar em Tierre</button>
+                <button class="btn-resultado right ui-btn ui-btn-b ui-btn-inline ui-corner-all"></button>
+                </br>
+                <img src="img/rei_01_01.JPG">
+                <img src="img/rei_01_02.JPG">
+            </div>
+        </section>
+
+        <section id="votacao_rainha_2" data-role="page">
+            <header data-role="header" data-position="fixed"><h1><img alt="" src="img/logo_02.png"></h1></header>
+            <footer data-role="footer" data-theme="d" class="ui-footer-fixed">
+                <div data-role="navbar">
+                    <ul>                        
+                        <li><a href="#atracoes" class="ui-btn ui-btn-icon-top ui-icon-atracoes">Atrações</a></li>
+                        <li><a class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-votacao-active">Votações</a></li>
+                        <li><a href="#abada" class="ui-btn ui-btn-icon-top ui-icon-abada">Abadás</a></li>
+                    </ul>
+                </div>
+            </footer>
+            
+            <div data-role="main" class="ui-content ui-cards">
+                <img src="img/rainha_01_mini.jpg">
+                <div class="text_details">
+                    <p>Adelânia Nicácio da Silva, 21 anos, estudando técnica em Segurança do Trabalho, no IFBA, natural de Juazeiro, e quer ser Rainha do Carnaval porque gosta muito de festa e se identifica muito com o Carnaval de Juazeiro. Muita animação é o que o folião pode esperar da candidata, que se sente preparada para o Reinado de Momo. Elogia a importância do voto popular para a eleição do Rei e da Rainha, o que permitiu sonhar com o título de Rainha do Carnaval de Juazeiro 2016.
+                    </p>
+                </div>
+                </br>
+                <a href="#votacao" class="left ui-btn ui-btn-c ui-btn-inline ui-corner-all">Voltar</a>
+                <button onclick="votarRainha(2)" class="btn-votar right ui-btn ui-btn-b ui-btn-inline ui-corner-all">Votar em Adelânia</button>
+                <button class="btn-resultado right ui-btn ui-btn-b ui-btn-inline ui-corner-all"></button>
+                </br>
+                <img src="img/rainha_01_01.JPG">
+                <img src="img/rainha_01_02.JPG">
+            </div>
+        </section>
+
+        <section id="votacao_rainha_1" data-role="page">
+            <header data-role="header" data-position="fixed"><h1><img alt="" src="img/logo_02.png"></h1></header>
+            <footer data-role="footer" data-theme="d" class="ui-footer-fixed">
+                <div data-role="navbar">
+                    <ul>                        
+                        <li><a href="#atracoes" class="ui-btn ui-btn-icon-top ui-icon-atracoes">Atrações</a></li>
+                        <li><a class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-votacao-active">Votações</a></li>
+                        <li><a href="#abada" class="ui-btn ui-btn-icon-top ui-icon-abada">Abadás</a></li>
+                    </ul>
+                </div>
+            </footer>
+            
+            <div data-role="main" class="ui-content ui-cards">
+                <img src="img/rainha_02_mini.jpg">
+                <div class="text_details">
+                    <p>Bárbara Santana Maceno, 18 anos, natural de Juazeiro, estudando para o concurso da PM, quer ser Rainha do Carnaval de Juazeiro porque já vem de muito tempo essa vontade de participar, vem da família, o samba está no sangue, o avô era dono de Escola de Samba, A Voz do São Francisco, segundo ela “já vem da raiz, está no sangue”. Gosta muito de dançar, curtir atrás do trio, e a sua campanha é que o folião pode esperar por uma rainha muito alegre.
+                    </p>
+                </div>
+                </br>
+                <a href="#votacao" class="left ui-btn ui-btn-c ui-btn-inline ui-corner-all">Voltar</a>
+                <!--<a href="#votacao" class="right ui-btn ui-btn-b ui-btn-inline ui-corner-all">Votar em Bárbara</a>-->
+                <button onclick="votarRainha(1)" class="btn-votar right ui-btn ui-btn-b ui-btn-inline ui-corner-all">Votar em Bárbara</button>
+                <button class="btn-resultado right ui-btn ui-btn-b ui-btn-inline ui-corner-all"></button>
+                </br>
+                <img src="img/rainha_02_01.JPG">
+                <img src="img/rainha_02_02.JPG">
+            </div>
+        </section>
+
+        <section id="votacao_rainha_3" data-role="page">
+            <header data-role="header" data-position="fixed"><h1><img alt="" src="img/logo_02.png"></h1></header>
+            <footer data-role="footer" data-theme="d" class="ui-footer-fixed">
+                <div data-role="navbar">
+                    <ul>                        
+                        <li><a href="#atracoes" class="ui-btn ui-btn-icon-top ui-icon-atracoes">Atrações</a></li>
+                        <li><a class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-votacao-active">Votações</a></li>
+                        <li><a href="#abada" class="ui-btn ui-btn-icon-top ui-icon-abada">Abadás</a></li>
+                    </ul>
+                </div>
+            </footer>
+            
+            <div data-role="main" class="ui-content ui-cards">
+                <img src="img/rainha_03_mini.jpg">
+                <div class="text_details">
+                    <p>Eliene Bitencourt, 46 anos, nível médio completo, natural de Juazeiro, gerencia uma consultoria financeira, e está candidata a Rainha do Carnaval de Juazeiro, porque acredita que é um sonho de toda adolescente, mas somente agora por incentivo do filho, resolveu sonhar com a coroa de Rainha do Carnaval de sua cidade. “Agora chegou a minha hora”. A candidata promete levar para a avenida muita alegria, animação, paz, harmonia, e como ela mesma diz: “Eu sou o próprio carnaval”.
+                    </p>
+                </div>
+                </br>
+                <a href="#votacao" class="left ui-btn ui-btn-c ui-btn-inline ui-corner-all">Voltar</a>
+                <button onclick="votarRainha(3)" class="btn-votar right ui-btn ui-btn-b ui-btn-inline ui-corner-all">Votar em Eliene</button>
+                <button class="btn-resultado right ui-btn ui-btn-b ui-btn-inline ui-corner-all"></button>
+                </br>
+                <img src="img/rainha_03_01.JPG">
+                <img src="img/rainha_03_02.JPG">
+            </div>
+        </section>
+    </body>
+</html>
+
