@@ -121,8 +121,6 @@ function inserirTrioMarker (trioMarker) {
     
     mapTrios.push (trioMarker);
     
-    setCenterToLocation(trioMarker.lat, trioMarker.lng);
-    
     mapMarkers.addLayer(trioMarker.marker);
     
     trioMarker.marker.bindPopup (trioMarker.artista);
