@@ -79,9 +79,10 @@ function onLoad () {
 
     $(':mobile-pagecontainer').on ('pagecontainerchange', function (event, ui) {
         if (ui.toPage instanceof Object) {
-        	page_id = ui.toPage.attr('id');
-            if (page_id == 'votacao_momo_1' || page_id == 'votacao_rainha_1' || page_id == 'votacao_rainha_2' || page_id == 'votacao_rainha_3') {
-            	habilitarBotoesVotacao ();
+            page_id = ui.toPage.attr('id');
+            
+            if (ga) {
+                window.analytics.trackView(page_id);
             }
         }
     });
