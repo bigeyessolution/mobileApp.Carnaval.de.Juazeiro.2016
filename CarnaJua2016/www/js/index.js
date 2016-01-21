@@ -64,6 +64,7 @@ function onLoad () {
         
         $('#formpromo').on ('submit', enviarTexto);
 
+        $('#celular').mask('(00)00000-0000');                
 
 
 //    $(':mobile-pagecontainer').on ('pagecontainerbeforechange', function (event, ui) {
@@ -78,15 +79,6 @@ function onLoad () {
             
             if (ga) {
                 window.analytics.trackView(page_id);
-            }
-            
-            if (page_id == 'fpromocoes') {
-                
-                $('#fpromocoes input').val('');
-                
-                $('#celular').mask('(##)#0000-0000');
-                
-                
             }
         }
     });
