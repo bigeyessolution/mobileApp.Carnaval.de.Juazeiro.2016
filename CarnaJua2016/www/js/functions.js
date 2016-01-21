@@ -89,11 +89,7 @@ function pegarPosicoesDosTrios () {
                 marker: marker
             };
             
-            if (trioMarkerEstaNaLista(trioMarker)) {
-                atualizarPosicaoTrioMarker(trioMarker);
-            } else {
-                inserirTrioMarker(trioMarker);
-            }
+            inserirTrioMarker(trioMarker);
         });
     });
 }
