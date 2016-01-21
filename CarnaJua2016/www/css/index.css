@@ -16,6 +16,7 @@ and open the template in the editor.
 
 html, body, .ui-page, .ui-content, #map {
     height: 100% !important;
+    padding: 0 !important;
 }
 
 body{
@@ -23,10 +24,16 @@ body{
 }
 
 .ui-content {
-    padding: 0 !important;
-    margin-bottom: 4rem;
-    margin-top: 0.4rem;
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
     height: 100% !important;
+}
+
+#trio div.ui-content {
+    padding-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
 }
 
 .text_details{
