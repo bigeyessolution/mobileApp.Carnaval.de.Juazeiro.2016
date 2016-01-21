@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.bigeyessolution.CarnaJuaApp" version="0.5.1">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.bigeyessolution.CarnaJuaApp" version="0.9.0">
     <name>CarnaJuaApp</name>
     <description>
         O aplicativo oficial do Carnaval 2016 de Juazeiro, Bahia.
@@ -9,14 +9,8 @@
     </author>
     <content src="index.html"/>
     <preference name="Orientation" value="portrait"/>
-    <preference name="SplashScreen" value="screen"/>
-    <preference name="SplashScreenDelay" value="3000" />
     <preference name="BackgroundColor" value="0xffffcd00"/>
-    <plugin name="cordova-plugin-whitelist" spec="1"/>
-    <plugin name="cordova-plugin-device"/>
-    <plugin name="cordova-plugin-dialogs"/>
-    <plugin name="cordova-plugin-network-information"/>
-    <plugin name="cordova-plugin-splashscreen"/>
+    <plugin name="cordova-plugin-whitelist" spec="0"/>
     <access origin="*"/>
     <allow-navigation href="*"/>
     <allow-intent href="http://*/*"/>
@@ -31,14 +25,6 @@
         <icon density="mdpi" src="res/icon/android/mdpi.png"/>
         <icon density="hdpi" src="res/icon/android/hdpi.png"/>
         <icon density="xhdpi" src="res/icon/android/xhdpi.png"/>
-        <splash density="port-hdpi" src="res/screen/android/hdpi/port.png"/>
-        <splash density="port-ldpi" src="res/screen/android/ldpi/port.png"/>
-        <splash density="port-mdpi" src="res/screen/android/mdpi/port.png"/>
-        <splash density="port-xhdpi" src="res/screen/android/xhdpi/port.png"/>
-        <splash density="land-hdpi" src="res/screen/android/hdpi/land.png"/>
-        <splash density="land-ldpi" src="res/screen/android/ldpi/land.png"/>
-        <splash density="land-mdpi" src="res/screen/android/mdpi/land.png"/>
-        <splash density="land-xhdpi" src="res/screen/android/xhdpi/land.png"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*"/>
