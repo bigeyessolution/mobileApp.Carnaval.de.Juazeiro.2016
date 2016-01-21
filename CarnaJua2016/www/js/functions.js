@@ -65,12 +65,12 @@ function pegarPosicoesDosTrios () {
          
         $.each(trios, function (key, trio){
             var icone = L.icon({
-                iconUrl: 'css/images/marker-icon.png',
-                iconRetinaUrl: 'css/images/marker-icon-2x.png',
+                iconUrl: 'img/pins/' + trio.idartista + '.png',
+                //iconRetinaUrl: 'css/images/marker-icon-2x.png',
                 iconSize: [25, 41],
                 iconAnchor: [12, 40],
                 popupAnchor: [3, -43],
-                shadowUrl: 'css/images/marker-shadow.png',
+                shadowUrl: 'img/pins/sombra.png',
                 shadowSize: [41, 41],
                 shadowAnchor: [11, 40]
             });
@@ -89,7 +89,8 @@ function pegarPosicoesDosTrios () {
                 marker: marker
             };
             
-            inserirTrioMarker(trioMarker);
+            mapTrios.push (trioMarker);
+            mapMarkers.addLayer(trioMarker.marker);
         });
     });
 }
@@ -108,28 +109,6 @@ function trioMarkerEstaNaLista(trioMarker) {
     }
     
     return false;
-}
-
-function inserirTrioMarker (trioMarker) {
-    if (trioMarker.idartista === false) {
-        return;
-    }
-    
-    mapTrios.push (trioMarker);
-    
-    mapMarkers.addLayer(trioMarker.marker);
-    
-    trioMarker.marker.bindPopup (trioMarker.artista, { keepInView: true, closeButton: false });
-    
-    trioMarker.marker.openPopup();
-}
-
-function removerTrioMarker (trioMarker) {
-    
-}
-
-function atualizarPosicaoTrioMarker (trioMarker) {
-    
 }
 
 function clearMap () {
