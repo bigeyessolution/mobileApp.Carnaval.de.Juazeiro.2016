@@ -20,7 +20,9 @@ function enviarTexto () {
     };
     
     $.post(base_url + 'Promocao?securekey=XcQLOs84ZPRhq2te8nMWJMh7RA3wJgkwi08Xh4P6JubYmt2iGC', dados, function (result) {
-        alert (JSON.stringify(result));
+        navigator.notification.confirm(dados.message, function () {}, '', ['OK']);
+    }).fail(function () {
+        navigator.notification.confirm('Ocorreu uma falha ao enviar sua mensagem, tende novamente mais tarde!', function () {}, '', ['OK']);
     });
 }
 
