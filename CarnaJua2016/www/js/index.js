@@ -1,13 +1,7 @@
 var base_url = 'http://carnajua.bigeyessolution.com/';
 // var base_url = 'http://192.168.0.3/';
 
-var device_info = false;
-var votouMomo = false;
-var votosMomo = false;
-var votouRainha =  false;
-var votosRainha = false;
-var votacao = false;
-//var gaPlugin = false;
+var ga = false;
 var showVotacao = false;
 var onLine = false;
 var watchID = false;
@@ -22,13 +16,12 @@ function onDeviceReady () {
     verificar_device();
 
     onResume();
-
-//    gaPlugin = window.plugins.gaPlugin;
-//
-//    if (gaPlugin) {
-//        gaPlugin.init(gaSuccessHandler, gaErrorHandler, "UA-59363254-4", 10); 
-//    }
-
+    
+    ga = window.analytics;
+    
+    if (ga) {
+        window.analytics.startTrackerWithId('UA-59363254-4');
+    }
 }
 
 
