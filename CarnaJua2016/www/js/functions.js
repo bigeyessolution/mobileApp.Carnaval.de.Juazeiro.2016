@@ -13,41 +13,13 @@ var watchID = false;
 var showPuzzleEnabledMessage = false;
 var map_folder = false;
 
-//var exemploArtista = L.icon({
-//    iconUrl: 'images/map-point-enabled.png',
-//    iconRetinaUrl: 'images/map-point-enabled@2x.png',
-//    iconSize: [36, 48],
-//    iconAnchor: [18, 48]
-//});
-//
-//var userIcon = L.icon({ //@TODO diminuir
-//    iconUrl: 'images/map-user.png',
-//    iconRetinaUrl: 'images/map-user@2x.png',
-//    iconSize: [84, 65],
-//    iconAnchor: [39.93, 62]
-//});
-
-
-function createMap () 
-{    
+function createMap () {    
     map = L.map('map', {zoomControl: false}).setView([mapcenter.lat, mapcenter.lng], 17);
 
-    //@TODO: verificar se vai usar offline ou não.
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy;<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-    
-    //TODO: criar limites
-    
-//    userMarker = L.marker(L.latLng(0, 0),{ icon: userIcon });
-//    userCircleMarker = L.circleMarker(L.latLng(0, 0), {
-//        stroke: true, color: '#b35731', weigth: 2, opacity: 0.5,
-//        fill: true, fillColor: '#dbaf9c', fillOpacity: 0.5
-//    });
-//    userCircleMarker.setRadius(20);
-//    userMarkerLayer.addLayer(userCircleMarker);
-//    userMarkerLayer.addLayer(userMarker);
-//    
+
     map.addLayer(mapMarkers);
 }
 
@@ -80,6 +52,11 @@ function pegarPosicoesDosTrios () {
                 { icon: icone, clickable: false }
             );
             
+			marker.bindPopup (
+				trio.artista, 
+				{ closeButton: false }
+			);
+            
             var trioMarker = {
                 serial: trio.serial,
                 idartista: trio.idartista,
@@ -88,27 +65,11 @@ function pegarPosicoesDosTrios () {
                 lng: trio.lng,
                 marker: marker
             };
-            
+
             mapTrios.push (trioMarker);
             mapMarkers.addLayer(trioMarker.marker);
         });
     });
-}
-
-function trioMarkerEstaNaLista(trioMarker) {
-    for (trio in mapTrios) {
-        if (trio.serial === trioMarker.serial) {
-            if (trioMarker.idartista) {
-                return true;
-            }
-            
-            removerTrioMarker(trioMarker);
-            
-            return false;
-        }
-    }
-    
-    return false;
 }
 
 function clearMap () {
