@@ -1,3 +1,42 @@
+var map = false;
+var mapMarkers = new L.FeatureGroup();
+var mapPuzzlesPoints = [];
+var userMarker = false;
+var userCircleMarker = false;
+var userMarkerLayer = new L.FeatureGroup();
+var watchId = false;
+
+function createMap () 
+{
+    var mapAttribution = 'Map Data &copy;<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> and Contributors';
+    
+    centerPoint = appConf.start_position[0];
+    
+    map = L.map('map', {zoomControl: false}).setView([centerPoint.lat, centerPoint.lng], 18);
+
+    //@TODO: verificar se vai usar offline ou não.
+    L.tileLayer('data/map/{z}/{x}/{y}.jpg', {
+        attribution: mapAttribution,
+        minZoom: 16,
+        maxZoom: 18
+    }).addTo(map);
+    
+    //TODO: criar limites
+    
+    userMarker = L.marker(L.latLng(0, 0),{ icon: userIcon });
+    userCircleMarker = L.circleMarker(L.latLng(0, 0), {
+        stroke: true, color: '#b35731', weigth: 2, opacity: 0.5,
+        fill: true, fillColor: '#dbaf9c', fillOpacity: 0.5
+    });
+    userCircleMarker.setRadius(20);
+    userMarkerLayer.addLayer(userCircleMarker);
+    userMarkerLayer.addLayer(userMarker);
+    
+    map.addLayer(mapMarkers);
+}
+
+
+
 function goartista(idartista) {
     if ( ! tempoArtista(idartista) ) return;
     
