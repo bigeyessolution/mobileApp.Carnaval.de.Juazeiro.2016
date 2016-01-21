@@ -1,38 +1,54 @@
 var map = false;
 var mapMarkers = new L.FeatureGroup();
 var mapPuzzlesPoints = [];
+var mapcenter = {
+    lat: 0,
+    lng: 0
+};
+
 var userMarker = false;
 var userCircleMarker = false;
 var userMarkerLayer = new L.FeatureGroup();
 var watchId = false;
+var showPuzzleEnabledMessage = false;
+var map_folder = false;
+
+//var exemploArtista = L.icon({
+//    iconUrl: 'images/map-point-enabled.png',
+//    iconRetinaUrl: 'images/map-point-enabled@2x.png',
+//    iconSize: [36, 48],
+//    iconAnchor: [18, 48]
+//});
+//
+//var userIcon = L.icon({ //@TODO diminuir
+//    iconUrl: 'images/map-user.png',
+//    iconRetinaUrl: 'images/map-user@2x.png',
+//    iconSize: [84, 65],
+//    iconAnchor: [39.93, 62]
+//});
+
 
 function createMap () 
-{
-    var mapAttribution = 'Map Data &copy;<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> and Contributors';
-    
-    centerPoint = appConf.start_position[0];
-    
-    map = L.map('map', {zoomControl: false}).setView([centerPoint.lat, centerPoint.lng], 18);
+{    
+    map = L.map('map', {zoomControl: false}).setView([mapcenter.lat, mapcenter.lng], 18);
 
     //@TODO: verificar se vai usar offline ou não.
-    L.tileLayer('data/map/{z}/{x}/{y}.jpg', {
-        attribution: mapAttribution,
-        minZoom: 16,
-        maxZoom: 18
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy;<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
     
     //TODO: criar limites
     
-    userMarker = L.marker(L.latLng(0, 0),{ icon: userIcon });
-    userCircleMarker = L.circleMarker(L.latLng(0, 0), {
-        stroke: true, color: '#b35731', weigth: 2, opacity: 0.5,
-        fill: true, fillColor: '#dbaf9c', fillOpacity: 0.5
-    });
-    userCircleMarker.setRadius(20);
-    userMarkerLayer.addLayer(userCircleMarker);
-    userMarkerLayer.addLayer(userMarker);
-    
-    map.addLayer(mapMarkers);
+//    userMarker = L.marker(L.latLng(0, 0),{ icon: userIcon });
+//    userCircleMarker = L.circleMarker(L.latLng(0, 0), {
+//        stroke: true, color: '#b35731', weigth: 2, opacity: 0.5,
+//        fill: true, fillColor: '#dbaf9c', fillOpacity: 0.5
+//    });
+//    userCircleMarker.setRadius(20);
+//    userMarkerLayer.addLayer(userCircleMarker);
+//    userMarkerLayer.addLayer(userMarker);
+//    
+//    map.addLayer(mapMarkers);
 }
 
 

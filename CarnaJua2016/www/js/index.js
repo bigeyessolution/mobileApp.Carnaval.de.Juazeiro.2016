@@ -66,7 +66,7 @@ function onLoad () {
 
         $('#celular').mask('(00)00000-0000');                
 
-
+        createMap();
 //    $(':mobile-pagecontainer').on ('pagecontainerbeforechange', function (event, ui) {
 //        if (ui.toPage instanceof Object) {
 //            trackGA(ui.toPage.attr('id'));
