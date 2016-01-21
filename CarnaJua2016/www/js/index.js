@@ -73,6 +73,31 @@ function onLoad () {
 //        }
 //    });
 
+    $(":mobile-pagecontainer").on("pagecontainershow", function( event, ui ) {
+        var toPage = ui.toPage.attr("id");
+        
+        if ( watchID !== false ) {
+            clearInterval(watchID);
+            watchID = false;
+        }
+        
+        if(watchId !== false) { //unfollow user
+            unfollowUserPosition();
+            setBtnLocationStatus(false);
+        }
+        
+        switch(toPage) {
+            case 'trio':
+                clearMap();
+                monitorarTrios();
+                
+                map.invalidateSize();
+                break;
+            default:
+                break;
+        }
+    });
+
     $(':mobile-pagecontainer').on ('pagecontainerchange', function (event, ui) {
         if (ui.toPage instanceof Object) {
             page_id = ui.toPage.attr('id');

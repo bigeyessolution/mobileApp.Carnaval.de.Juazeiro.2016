@@ -1,9 +1,9 @@
 var map = false;
 var mapMarkers = new L.FeatureGroup();
-var mapPuzzlesPoints = [];
+var mapTrios = [];
 var mapcenter = {
-    lat: 0,
-    lng: 0
+    lat: -9.4124,
+    lng: -40.4997
 };
 
 var userMarker = false;
@@ -30,7 +30,7 @@ var map_folder = false;
 
 function createMap () 
 {    
-    map = L.map('map', {zoomControl: false}).setView([mapcenter.lat, mapcenter.lng], 18);
+    map = L.map('map', {zoomControl: false}).setView([mapcenter.lat, mapcenter.lng], 17);
 
     //@TODO: verificar se vai usar offline ou não.
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -51,7 +51,30 @@ function createMap ()
 //    map.addLayer(mapMarkers);
 }
 
+function monitorarTrios () {
+    
+}
 
+function clearMap () 
+{
+    if (mapTrios.length > 0 ) {
+        mapMarkers.clearLayers();
+        mapTrios = [];
+    }
+    
+    setCenterToLocation(mapcenter.lat, mapcenter.lng);
+}
+
+/**
+ * 
+ * @param {integer} lat
+ * @param {integer} lng
+ * @returns {undefined}
+ */
+function setCenterToLocation (lat, lng) 
+{
+    map.panTo( L.latLng(lat, lng) );
+}
 
 function goartista(idartista) {
     if ( ! tempoArtista(idartista) ) return;
