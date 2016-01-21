@@ -119,7 +119,7 @@ function inserirTrioMarker (trioMarker) {
     
     mapMarkers.addLayer(trioMarker.marker);
     
-    trioMarker.marker.bindPopup (trioMarker.artista);
+    trioMarker.marker.bindPopup (trioMarker.artista, { keepInView: true, closeButton: false });
     
     trioMarker.marker.openPopup();
 }
