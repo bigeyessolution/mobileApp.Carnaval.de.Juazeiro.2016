@@ -202,39 +202,40 @@ and open the template in the editor.
             
             <div data-role="main" class="ui-content text ui-cards">
                 <p>Declare seu amor por seu artísta favoríto.</p>
-                <a href="#ivete"><img src="img/17_mini.jpg"></a>
-                <a href="#saulo"><img src="img/06_mini.jpg"></a>
-                <a href="#daniela"><img src="img/04_mini.jpg"></a>
-                <a href="#bell"><img src="img/08_mini.jpg"></a>
-                <a href="#psirico"><img src="img/13_mini.jpg"></a>
-                <a href="#kate"><img src="img/05_mini.jpg"></a>
-                <a href="#desejo"><img src="img/15_mini.jpg"></a>
+                <a onclick="goartista(1)"><img src="img/1.jpg"></a>
+                <a onclick="goartista(2)"><img src="img/2.jpg"></a>
+                <a onclick="goartista(4)"><img src="img/4.jpg"></a>
+                <a onclick="goartista(3)"><img src="img/3.jpg"></a>
+                <a onclick="goartista(5)"><img src="img/5.jpg"></a>
+                <a onclick="goartista(7)"><img src="img/7.jpg"></a>
+                <a onclick="goartista(19)"><img src="img/19.jpg"></a>
             </div>
         </section>
         
         <!-- Promoção Ivete-->
-        <section id="ivete" data-role="page">
+        <section id="fpromocoes" data-role="page">
             <header data-role="header" data-position="fixed"><div class="header-logo"><h1><img alt="" src="img/logo.png"></h1></div></header>
             <footer data-role="footer" data-theme="d" class="ui-footer-fixed">
                 <div data-role="navbar">
                     <ul>
                         <li><a href="#agenda" class="ui-btn ui-btn-icon-top ui-icon-atracoes">Agenda</a></li>
                         <li><a href="#trio" class="ui-btn ui-btn-icon-top ui-icon-votacao">Trio</a></li>
-                        <li><a class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-abada-active">Sou Fã</a></li>
+                        <li><a href="#promocoes" class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-abada-active">Sou Fã</a></li>
                         <li><a href="#dicas" class="ui-btn ui-btn-icon-top ui-icon-abada">Dicas</a></li>
                     </ul>
                 </div>
             </footer>
             
             <div data-role="main" class="ui-content text ui-cards">
-                <a href="#ivete"><img src="img/17_mini.jpg"></a>
+                <img id="imgartista" src="img/1.jpg">
                 <form>
+                    <input value="" id="idartista" type="hidden">
                     <label>Nome:</label>
                     <input id="nome" type="text">
                     <label>Celular:</label>
-                    <input id="celular" type="text">
+                    <input id="celular" placeholder="(99) 999-999-999" type="text">
                     <label>Declaração:</label>
-                    <textarea id="mensagem" maxlength="200"></textarea>
+                    <textarea id="texto" maxlength="200"></textarea>
                     <input class="ui-btn-b" type="submit" value="Enviar">
                 </form>
             </div>
