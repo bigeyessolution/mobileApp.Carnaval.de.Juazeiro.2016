@@ -81,14 +81,11 @@ function onLoad () {
             watchID = false;
         }
         
-        if(watchId !== false) { //unfollow user
-            unfollowUserPosition();
-            setBtnLocationStatus(false);
-        }
-        
         switch(toPage) {
             case 'trio':
                 clearMap();
+                setCenterToLocation(mapcenter.lat, mapcenter.lng);
+                
                 monitorarTrios();
                 
                 map.invalidateSize();

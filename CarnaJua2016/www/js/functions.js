@@ -9,7 +9,7 @@ var mapcenter = {
 var userMarker = false;
 var userCircleMarker = false;
 var userMarkerLayer = new L.FeatureGroup();
-var watchId = false;
+var watchID = false;
 var showPuzzleEnabledMessage = false;
 var map_folder = false;
 
@@ -48,21 +48,101 @@ function createMap ()
 //    userMarkerLayer.addLayer(userCircleMarker);
 //    userMarkerLayer.addLayer(userMarker);
 //    
-//    map.addLayer(mapMarkers);
+    map.addLayer(mapMarkers);
 }
 
 function monitorarTrios () {
+    pegarPosicoesDosTrios();
+    
+    watchID = setInterval(pegarPosicoesDosTrios, 10000);
+}
+
+function pegarPosicoesDosTrios () {
+    $.getJSON(base_url + 'Trios', function (data) {
+        trios = data.content;
+        
+        clearMap();
+         
+        $.each(trios, function (key, trio){
+            var icone = L.icon({
+                iconUrl: 'css/images/marker-icon.png',
+                iconRetinaUrl: 'css/images/marker-icon-2x.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 40],
+                popupAnchor: [3, -43],
+                shadowUrl: 'css/images/marker-shadow.png',
+                shadowSize: [41, 41],
+                shadowAnchor: [11, 40]
+            });
+            
+            var marker = L.marker(
+                L.latLng(trio.lat,trio.lng),
+                { icon: icone, clickable: false }
+            );
+            
+            var trioMarker = {
+                serial: trio.serial,
+                idartista: trio.idartista,
+                artista: trio.artista,
+                lat: trio.lat,
+                lng: trio.lng,
+                marker: marker
+            };
+            
+            if (trioMarkerEstaNaLista(trioMarker)) {
+                atualizarPosicaoTrioMarker(trioMarker);
+            } else {
+                inserirTrioMarker(trioMarker);
+            }
+        });
+    });
+}
+
+function trioMarkerEstaNaLista(trioMarker) {
+    for (trio in mapTrios) {
+        if (trio.serial === trioMarker.serial) {
+            if (trioMarker.idartista) {
+                return true;
+            }
+            
+            removerTrioMarker(trioMarker);
+            
+            return false;
+        }
+    }
+    
+    return false;
+}
+
+function inserirTrioMarker (trioMarker) {
+    if (trioMarker.idartista === false) {
+        return;
+    }
+    
+    mapTrios.push (trioMarker);
+    
+    setCenterToLocation(trioMarker.lat, trioMarker.lng);
+    
+    mapMarkers.addLayer(trioMarker.marker);
+    
+    trioMarker.marker.bindPopup (trioMarker.artista);
+    
+    trioMarker.marker.openPopup();
+}
+
+function removerTrioMarker (trioMarker) {
     
 }
 
-function clearMap () 
-{
+function atualizarPosicaoTrioMarker (trioMarker) {
+    
+}
+
+function clearMap () {
     if (mapTrios.length > 0 ) {
         mapMarkers.clearLayers();
         mapTrios = [];
     }
-    
-    setCenterToLocation(mapcenter.lat, mapcenter.lng);
 }
 
 /**
