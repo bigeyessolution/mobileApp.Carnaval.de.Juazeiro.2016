@@ -228,15 +228,15 @@ and open the template in the editor.
             
             <div data-role="main" class="ui-content text ui-cards">
                 <img id="imgartista" src="img/1.jpg">
-                <form>
+                <form id="formpromo">
                     <input value="" id="idartista" type="hidden">
                     <label>Nome:</label>
-                    <input id="nome" type="text">
+                    <input id="nome" required="required" maxlength="80">
                     <label>Celular:</label>
-                    <input id="celular" type="tel">
+                    <input id="celular" required="required" maxlength="15">
                     <label>Declaração:</label>
-                    <textarea id="texto" maxlength="200"></textarea>
-                    <input class="ui-btn-b" type="submit" onclick="enviarTexto()" value="Enviar">
+                    <textarea id="texto" maxlength="200"  required="required"></textarea>
+                    <input class="ui-btn-b" type="submit" value="Enviar">
                 </form>
             </div>
         </section>

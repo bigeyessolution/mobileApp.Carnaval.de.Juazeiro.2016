@@ -12,9 +12,6 @@ var iddevice = false;
 var hash_key = false;
 
 function onDeviceReady () {
-    
-    verificar_device();
-
     onResume();
     
     ga = window.analytics;
@@ -40,10 +37,6 @@ function onPause () {
 }
 
 function onResume () {
-    if (votacao) {
-        watchTime = setInterval(verificacoes, 5000);
-        
-    }
     
 //    gaPlugin = window.plugins.gaPlugin;
 //
@@ -68,6 +61,8 @@ function onLoad () {
 	document.addEventListener("resume", onResume, false);
 	document.addEventListener("online", setOnLine, false);
 	document.addEventListener("offline", setOffLine, false);
+        
+        $('#formpromo').on ('submit', enviarTexto);
 
 
 
@@ -83,6 +78,15 @@ function onLoad () {
             
             if (ga) {
                 window.analytics.trackView(page_id);
+            }
+            
+            if (page_id == 'fpromocoes') {
+                
+                $('#fpromocoes input').val('');
+                
+                $('#celular').mask('(##)#0000-0000');
+                
+                
             }
         }
     });
