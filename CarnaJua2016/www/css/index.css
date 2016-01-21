@@ -58,7 +58,8 @@ body{
 }
 
 .ui-header h1 {
-    width: 8rem;
+    width: 100%;
+    text-align: center;
 }
 
 .ui-header h1 img {
@@ -78,7 +79,7 @@ div.logo {
 	background-color: transparent !important;
 	border-bottom: none;
 	border-style: none;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
   border-bottom: none !important;
   border-style: none !important;
 }
@@ -118,4 +119,46 @@ div.logo {
     width: 100%;
     height: auto;
     margin-bottom: 0.3rem;
+}
+
+.ui-cards form {
+    padding: 0 2rem;
+}
+
+.bar-btn-inline{
+  text-align: center;
+}
+
+.ui-btn-inline{
+  margin-right: 2px !important;
+  padding: 8px !important;
+}
+
+.agenda-div{
+  padding: 0 2rem;
+}
+
+.agenda-title{
+  text-align: center;
+}
+
+.agenda-title span{
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.agenda-title h4{
+  margin-bottom: 0px !important;
+  color: #FF9900;
+  background-color: #000000;
+  padding: 1rem;
+}
+
+.agenda-text{
+  margin-top: 1rem;
+}
+
+.agenda-text span{
+  font-style: italic;
+  color: #424242;
 }
