@@ -9,7 +9,7 @@ function enviarTexto () {
     dados = {
         "idartista": $('#idartista').val(),
         "nome": $('#nome').val(),
-        "celular": $('#celular').val(),
+        "celular": parseInt($('#celular').val()),
         "texto": $('#texto').val()
     };
     
