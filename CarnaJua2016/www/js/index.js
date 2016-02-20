@@ -62,47 +62,48 @@ function onLoad () {
 	document.addEventListener("online", setOnLine, false);
 	document.addEventListener("offline", setOffLine, false);
         
-        $('#formpromo').on ('submit', enviarTexto);
+        //$('#formpromo').on ('submit', enviarTexto);
+        $('#fpesquisa').on ('submit', enviarPesquisa);
 
-        $('#celular').mask('(00)00000-0000');                
+        //$('#celular').mask('(00)00000-0000');                
 
-        createMap();
+        //createMap();
 //    $(':mobile-pagecontainer').on ('pagecontainerbeforechange', function (event, ui) {
 //        if (ui.toPage instanceof Object) {
 //            trackGA(ui.toPage.attr('id'));
 //        }
 //    });
 
-    $(":mobile-pagecontainer").on("pagecontainershow", function( event, ui ) {
-        var toPage = ui.toPage.attr("id");
-        
-        if ( watchID !== false ) {
-            clearInterval(watchID);
-            watchID = false;
-        }
-        
-        switch(toPage) {
-            case 'trio':
-                clearMap();
-                setCenterToLocation(mapcenter.lat, mapcenter.lng);
-                
-                monitorarTrios();
-                
-                map.invalidateSize();
-                break;
-            default:
-                break;
-        }
-    });
-
-    $(':mobile-pagecontainer').on ('pagecontainerchange', function (event, ui) {
-        if (ui.toPage instanceof Object) {
-            page_id = ui.toPage.attr('id');
-            
-            if (ga) {
-                window.analytics.trackView(page_id);
-            }
-        }
-    });
+//    $(":mobile-pagecontainer").on("pagecontainershow", function( event, ui ) {
+//        var toPage = ui.toPage.attr("id");
+//        
+//        if ( watchID !== false ) {
+//            clearInterval(watchID);
+//            watchID = false;
+//        }
+//        
+//        switch(toPage) {
+//            case 'trio':
+//                clearMap();
+//                setCenterToLocation(mapcenter.lat, mapcenter.lng);
+//                
+//                monitorarTrios();
+//                
+//                map.invalidateSize();
+//                break;
+//            default:
+//                break;
+//        }
+//    });
+//
+//    $(':mobile-pagecontainer').on ('pagecontainerchange', function (event, ui) {
+//        if (ui.toPage instanceof Object) {
+//            page_id = ui.toPage.attr('id');
+//            
+//            if (ga) {
+//                window.analytics.trackView(page_id);
+//            }
+//        }
+//    });
 
 }

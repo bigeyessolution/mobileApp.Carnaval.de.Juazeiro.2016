@@ -140,3 +140,46 @@ function tempoArtista (idartista) {
 
     return agora <= tempo;
 }
+
+function enviarPesquisa () {
+    dados = {
+        "q1": $("input:radio[name='q1']:checked").val(),
+        "q2": $("input:radio[name='q2']:checked").val(),
+        "q3": $("input:radio[name='q3']:checked").val(),
+        "q4": $("input[name='q4']").val(),
+        "q5": $("input:radio[name='q5']:checked").val(),
+        "q6": $("input:radio[name='q6']:checked").val(),
+        "q7": $("input:radio[name='q7']:checked").val(),
+        "q8": $("input:radio[name='q8']:checked").val(),
+        "q9a": $("input[name='q9a']").is(':checked'),
+        "q9b": $("input[name='q9b']").is(':checked'),
+        "q9c": $("input[name='q9c']").is(':checked'),
+        "q9d": $("input[name='q9d']").is(':checked'),
+        "q10a": $("input[name='q10a']").is(':checked'),
+        "q10b": $("input[name='q10b']").is(':checked'),
+        "q10c": $("input[name='q10c']").is(':checked'),
+        "q10d": $("input[name='q10d']").is(':checked'),
+        "q11a": $("input[name='q11a']").is(':checked'),
+        "q11b": $("input[name='q11b']").is(':checked'),
+        "q11c": $("input[name='q11c']").is(':checked'),
+        "q11d": $("input[name='q11d']").is(':checked'),
+        "q11e": $("input[name='q11e']").is(':checked'),
+        "q11f": $("input[name='q11f']").is(':checked'),
+        "q11g": $("input[name='q11g']").is(':checked'),
+        "q11h": $("input[name='q11h']").is(':checked'),
+        "q11i": $("input[name='q11i']").is(':checked'),
+        "q12": $("input[name='q12']").val()
+    };
+    
+    $.post(
+        base_url + 'Pesquisa?securekey=XcQLOs84ZPRhq2te8nMWJMh7RA3wJgkwi08Xh4P6JubYmt2iGC', 
+        dados, 
+    function (result) {
+        navigator.notification.confirm(
+            'Respostas enviadas com sucesso!', 
+            function () {}, '', ['OK']
+        );
+    }).fail(function () {
+        navigator.notification.confirm('Ocorreu uma falha ao enviar suas respostas, tende novamente mais tarde!', function () {}, '', ['OK']);
+    });
+}
