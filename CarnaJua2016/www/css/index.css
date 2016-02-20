@@ -21,6 +21,7 @@ html, body, .ui-page, .ui-content, #map {
 
 body{
   font-family: 'Lato', sans-serif !important;
+  background-color: #ffba00 !important;
 }
 
 .ui-content {
@@ -118,23 +119,36 @@ div.logo {
 	border-radius: 0 !important; 
 }
 
-/*.ui-icon-atracoes:after { background:url(../img/icon_estrela.png); background-size: 18px 18px; }*/
-.ui-icon-atracoes:after { background:url(../img/icon_estrela.png) 50% 50% no-repeat;  background-size: 22px 27px; }
-.ui-icon-votacao:after { background:url(../img/icon_votacao.png) 50% 50% no-repeat;  background-size: 22px 27px; }
-.ui-icon-abada:after { background:url(../img/icon_abada.png) 50% 50% no-repeat;  background-size: 27px 22px; }
+.rodape{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 
-.ui-icon-atracoes-active:after { background:url(../img/icon_estrela_active.png) 50% 50% no-repeat;  background-size: 22px 27px; }
-.ui-icon-votacao-active:after { background:url(../img/icon_votacao_active.png) 50% 50% no-repeat;  background-size: 22px 27px; }
-.ui-icon-abada-active:after { background:url(../img/icon_abada_active.png) 50% 50% no-repeat;  background-size: 27px 22px; }
+.rodape img{
+  width: 100%;
+}
 
-.ui-cards img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.3rem;
+h1, h4, h5{
+  text-align: center;
+}
+
+.ui-cards{
+  width: 100%;
+  text-align: left;
+  margin-left: 0.4rem;
 }
 
 .ui-cards form {
-    padding: 0 2rem;
+    padding-top: 0;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    list-style: outside none none !important;
+    list-style-type: none !important;
+
 }
 
 .map{
@@ -179,4 +193,30 @@ div.logo {
 .agenda-text span{
   font-style: italic;
   color: #424242;
+}
+
+form{
+  width: 90% !important;
+}
+.ss-q-item-label div{
+  width: 89%;
+  margin-right: 10px;
+}
+
+.ss-form-entry{
+  width: 89%;
+}
+
+ul{
+  list-style: none !important;
+  padding: 0;
+  width: 89%;
+}
+
+.ui-checkbox span{
+  font-size: 0.8rem !important;
+}
+
+.ui-radio label{ 
+  font-size: 0.5rem !important;
 }
