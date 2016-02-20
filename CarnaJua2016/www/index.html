@@ -38,7 +38,7 @@ and open the template in the editor.
                 <h1 style="width:90%;">Agora você pode avaliar o Carnaval de Juazeiro 2016 e contribuir para que ele seja ainda melhor em 2017.</h1>
                 <h4>Utilize a escala de conceito abaixo:</h4>
                 <h5>1 - péssimo,  2 - ruim,  3 - regular,  4 - bom  e  5 - excelente.</h5>
-                <form action="https://docs.google.com/forms/d/1sW1SKwqSncDUlfZ5RDC60OMqlpa-CkSOMfRSgjqS4f0/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+                <form id="fpesquisa">
                     <ol role="list" class="ss-question-list" style="padding-left: 0">
                         <div class="ss-form-question errorbox-good" role="listitem">
                             <div dir="auto" class="ss-item ss-item-required ss-scale">
@@ -553,23 +553,23 @@ and open the template in the editor.
                                         <li class="ss-choice-item">
                                             <label>
                                                 <span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q9" value="1" id="dias2017_1" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+                                                <input type="checkbox" name="q9a" id="dias2017_1" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
                                                 <span class="ss-choice-label">Quinta - Sexta - Sábado</span>
                                             </label></li>
                                         <li class="ss-choice-item">
                                             <label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q9" value="2" id="dias2017_2" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+                                                <input type="checkbox" name="q9b" id="dias2017_2" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
                                                 <span class="ss-choice-label">Quarta - Quinta - Sexta - Sábado</span>
                                             </label></li>
                                         <li class="ss-choice-item">
                                             <label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q9" value="3" id="dias2017_3" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+                                                <input type="checkbox" name="q9c" id="dias2017_3" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
                                                 <span class="ss-choice-label">Quinta - Sexta - Sábado - Domingo</span>
                                             </label></li>
                                         <li class="ss-choice-item">
                                             <label>
                                                 <span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q9" value="4" id="dias2017_4" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+                                                <input type="checkbox" name="q9d" id="dias2017_4" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
                                                 <span class="ss-choice-label">Tanto faz</span>
                                             </label></li>
                                     </ul>
@@ -589,19 +589,19 @@ and open the template in the editor.
                                     </label>
                                     <ul class="ss-choices ss-choices-required" role="group" aria-label="Qual a melhor localização para os camarotes do CarnaJua 2017 Must select exactly 1 options.">
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q10a" value="1" id="camarote2017_1" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+                                                <input type="checkbox" name="q10a" id="camarote2017_1" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
                                                 <span class="ss-choice-label">Avenida Adolfo Viana</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q10b" value="2" id="camarote2017_2" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+                                                <input type="checkbox" name="q10b" id="camarote2017_2" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
                                                 <span class="ss-choice-label">Antiga praça do Vaporzinho</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q10c" value="3" id="camarote2017_3" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+                                                <input type="checkbox" name="q10c" id="camarote2017_3" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
                                                 <span class="ss-choice-label">Orla 1</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q10d" value="4" id="camarote2017_4" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+                                                <input type="checkbox" name="q10d" id="camarote2017_4" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
                                                 <span class="ss-choice-label">Tanto faz</span>
                                             </label></li>
                                     </ul>
@@ -619,39 +619,39 @@ and open the template in the editor.
                                     </label>
                                     <ul class="ss-choices" role="group" aria-label="Quais das atrações você quer ver no CarnaJua 2017? Must select exactly 5 options.">
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q11" value="1" id="atracaoDenovo_1" role="checkbox" class="ss-q-checkbox"></span>
+                                                <input type="checkbox" name="q11a" id="atracaoDenovo_1" role="checkbox" class="ss-q-checkbox"></span>
                                                 <span class="ss-choice-label">Ivete Sangalo</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q11" value="2" id="atracaoDenovo_2" role="checkbox" class="ss-q-checkbox"></span>
+                                                <input type="checkbox" name="q11b" id="atracaoDenovo_2" role="checkbox" class="ss-q-checkbox"></span>
                                                 <span class="ss-choice-label">Saulo</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q11" value="3" id="atracaoDenovo_3" role="checkbox" class="ss-q-checkbox"></span>
+                                                <input type="checkbox" name="q11c" id="atracaoDenovo_3" role="checkbox" class="ss-q-checkbox"></span>
                                                 <span class="ss-choice-label">Bell</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q11" value="4" id="atracaoDenovo_4" role="checkbox" class="ss-q-checkbox"></span>
+                                                <input type="checkbox" name="q11d" id="atracaoDenovo_4" role="checkbox" class="ss-q-checkbox"></span>
                                                 <span class="ss-choice-label">Daniela</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q11" value="5" id="atracaoDenovo_5" role="checkbox" class="ss-q-checkbox"></span>
+                                                <input type="checkbox" name="q11e" id="atracaoDenovo_5" role="checkbox" class="ss-q-checkbox"></span>
                                                 <span class="ss-choice-label">Psirico</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q11" value="6" id="atracaoDenovo_6" role="checkbox" class="ss-q-checkbox"></span>
+                                                <input type="checkbox" name="q11f" id="atracaoDenovo_6" role="checkbox" class="ss-q-checkbox"></span>
                                                 <span class="ss-choice-label">Luiz Caldas</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q11" value="7" id="atracaoDenovo_7" role="checkbox" class="ss-q-checkbox"></span>
+                                                <input type="checkbox" name="q11g" id="atracaoDenovo_7" role="checkbox" class="ss-q-checkbox"></span>
                                                 <span class="ss-choice-label">Armandinho, Dodó e Osmar</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q11" value="8" id="atracaoDenovo_8" role="checkbox" class="ss-q-checkbox"></span>
+                                                <input type="checkbox" name="q11h" id="atracaoDenovo_8" role="checkbox" class="ss-q-checkbox"></span>
                                                 <span class="ss-choice-label">Selva Branca</span>
                                             </label></li>
                                         <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-                                                <input type="checkbox" name="q11" value="9" id="atracaoDenovo_9" role="checkbox" class="ss-q-checkbox"></span>
+                                                <input type="checkbox" name="q11i" value="9" id="atracaoDenovo_9" role="checkbox" class="ss-q-checkbox"></span>
                                                 <span class="ss-choice-label">Katê</span>
                                             </label></li>
                                     </ul>
