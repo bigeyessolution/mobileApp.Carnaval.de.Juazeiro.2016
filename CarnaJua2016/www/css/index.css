@@ -220,3 +220,6 @@ ul{
 .ui-radio label{ 
   font-size: 0.5rem !important;
 }
+#navigation-table{
+  margin-bottom: 6rem;
+}
