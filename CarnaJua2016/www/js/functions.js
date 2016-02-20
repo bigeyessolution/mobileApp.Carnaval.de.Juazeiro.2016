@@ -39,8 +39,8 @@ function pegarPosicoesDosTrios () {
             var icone = L.icon({
                 iconUrl: 'img/pins/' + trio.idartista + '.png',
                 //iconRetinaUrl: 'css/images/marker-icon-2x.png',
-                iconSize: [25, 41],
-                iconAnchor: [12, 40],
+                iconSize: [25, 35],
+                iconAnchor: [12, 35],
                 popupAnchor: [3, -43],
                 shadowUrl: 'img/pins/sombra.png',
                 shadowSize: [41, 41],
