@@ -1,4 +1,5 @@
-var base_url = 'http://carnajua.bigeyessolution.com/';
+var base_url = 'http://carnajua.laudivan.info/';
+//var base_url = 'http://carnajua.bigeyessolution.com/';
 // var base_url = 'http://192.168.0.3/';
 
 var ga = false;
